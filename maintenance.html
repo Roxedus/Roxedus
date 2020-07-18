@@ -1,0 +1,108 @@
+<!doctype html>
+<title>Site Maintenance</title>
+<style>
+    body {
+        text-align: center;
+        padding: 150px;
+        background: url('https://raw.githubusercontent.com/gilbN/Nostromo/master/blog/Senja-death-star.jpg') no-repeat center center fixed;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+
+    .content {
+        background-color: rgba(255, 255, 255, 0.75);
+        background-size: 100%;
+        color: inherit;
+        padding: 1px 100px 10px;
+        border-radius: 15px;
+    }
+
+    h1 { font-size: 40pt;}
+    body { font: 20px Helvetica, sans-serif; color: #333; }
+    article { display: block; text-align: left; width: 75%; margin: 0 auto; }
+    a:hover { color: #333; text-decoration: none; }
+    a.time:hover, a.time:link, a.time:visited, a.time { color: #4e4bfa !important; text-decoration: underline; }
+</style>
+    <script type="text/javascript">
+        function getDomain() {
+            const hostName = window.location.hostname;
+            let domain = hostName;
+
+            if (hostName != null) {
+                let parts = hostName.split('.').reverse();
+
+                if (parts != null && parts.length > 1) {
+                    domain = parts[1] + '.' + parts[0];
+
+                    if (hostName.toLowerCase().indexOf('.co.uk') !== -1 && parts.length > 2) {
+                        domain = parts[2] + '.' + domain;
+                    }
+                }
+            }
+            return domain;
+        }
+
+        function getTimeFromBody(elem) {
+            let t = document.getElementById(elem).innerHTML;
+            t = t.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [t];
+
+            if (t.length > 1) { // If time format correct
+                t = t.slice (1);  // Remove full string match value
+                t[5] = +t[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
+                t[0] = +t[0] % 12 || 12; // Adjust hours
+            }
+            return t.join (''); // return adjusted time or original string
+        }
+
+        let StartTime = "";
+        function DefTime() {
+            const oldTime = document.getElementById("EndTime").innerHTML;
+            let newTime = getTimeFromBody("EndTime");
+            console.log(oldTime);
+            StartTime = oldTime;
+            document.getElementById("EndTime").innerHTML = newTime;
+
+        }
+
+        function getApproxUntilFinished() {
+            let t = StartTime.split(":");
+            let e = new Date();
+            let d = new Date().getTime();
+            let dur = (e.setUTCHours(t[0],t[1],0,0) - d);
+            let seconds = Math.floor((dur / 1000) % 60),
+                minutes = Math.floor((dur / (1000 * 60)) % 60),
+                hours = Math.floor((dur / (1000 * 60 * 60)) % 24);
+
+            hours = (hours < 10) ? "0" + hours : hours;
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+            return hours + "h " + minutes + "m " + seconds + "s";
+        }
+
+        function updateTimer() {
+            document.getElementById("TimeUntil").innerHTML = "Please check back in: " + getApproxUntilFinished()
+        }
+    </script>
+<article>
+    <div class="background">
+        <div class="content">
+            <h1>We&rsquo;ll be right back!</h1>
+            <p>We're very sorry for the inconvenience but we&rsquo;re performing maintenance.</p>
+            <p>Maintenance is performed between <strong id="StartTime">04:00</strong> to <strong id="EndTime">07:30</strong> <a class="time" href="https://time.is/UTC" target="_blank"><strong>UTC</strong></a>.</p>
+            <p id="TimeUntil"></p>
+            <p>&mdash; <B><script>document.write(getDomain())</script> admin</B></p>
+        </div>
+    </div>
+</article>
+
+
+<script>
+    document.title = getDomain();
+    DefTime();
+    updateTimer();
+    document.getElementById("StartTime").innerHTML = getTimeFromBody("StartTime");
+    setInterval(updateTimer, 1000)
+</script>

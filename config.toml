@@ -1,0 +1,20 @@
+baseURL = "https://roxexus.dev/"
+languageCode = "en-us"
+title = "Roxedus.dev"
+theme = "introduction"
+
+[params]
+    themeStyle                   = "dark"                  # Choose "light" or "dark"
+    showRSSButton                = true                    # Show rss button in navigation
+
+    [params.home]
+        introHeight              = "medium"                # Input either "medium" or "large" or "fullheight"
+        showLatest               = true                    # Show latest blog post summary
+        localTime                = true                    # Show your current local time in contact section
+        timeZone                 = "Europe/Oslo"           # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+        timeFormat               = "HH:mm"                 # https://momentjs.com/docs/#/displaying/format/
+
+    [[params.social]]
+        url   = "https://twitter.com/Roxedus"
+        icon  = "twitter"
+        icon_pack = "fab"

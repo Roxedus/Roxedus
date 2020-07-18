@@ -1,5 +1,6 @@
 baseURL                          = "https://roxedus.dev/"  # Your domain name. Must end with "/"
 theme                            = "introduction"
+title = "Roxedus.dev"
 DefaultContentLanguage           = "en"                    # Default language for multilingual sites
 # disqusshortname                 = ""                       # https://gohugo.io/content-management/comments
 # googleAnalytics                 = ""                       # https://gohugo.io/templates/internal/#google-analytics
@@ -50,7 +51,7 @@ DefaultContentLanguage           = "en"                    # Default language fo
         languageCode     = "en-us"
         contentDir       = "content/en"
         weight           = 0
-        title            = "Introduction"
+        title            = "roxedus.dev"
         [languages.en.params]
             description  = "roxedus.dev"   # Max 160 characters show in search results
             footerText   = " "                      # Text to override default footer text (markdown allowed)

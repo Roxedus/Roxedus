@@ -1,7 +1,7 @@
 ---
 title: "Roxedus"
 draft: false
-weight: 0
+weight: 1
 ---
 
 Geek, Techentusiast, Norwegian

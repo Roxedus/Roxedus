@@ -1,0 +1,19 @@
+# Update dependencies
+
+version: 2
+updates:
+  - package-ecosystem: "gitsubmodule"
+    directory: "/site"
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+      - "automerge"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels:
+      - "dependencies"
+      - "automerge"

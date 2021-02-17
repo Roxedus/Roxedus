@@ -1,0 +1,36 @@
+# section information
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+  - name: All
+    filter: "all"
+  - name: Professional
+    filter: "professional"
+  - name: Hobby
+    filter: "hobby"
+
+# your projects
+projects:
+  - name: Linuxserver.io
+    logo: images/sections/projects/lsio.png
+    role: Member
+    timeline: "January 2020 - Present"
+    url: https://www.linuxserver.io/
+    summary: Developer and maintainer of popular Docker images used in the homeserver space
+    tags: ["hobby", "lsio", "docker"]
+
+  - name: ShiteMusicBot
+    logo: images/sections/projects/shite.png
+    role: Developer
+    timeline: "January 2019 - Present"
+    repo: https://github.com/r-Norge/ShiteMusicBot
+    summary: An Open Source Discord Music bot written in Python
+    tags: ["hobby", "python"]

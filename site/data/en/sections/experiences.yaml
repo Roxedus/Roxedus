@@ -1,0 +1,28 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your experiences
+experiences:
+  - company:
+      name: NTNU
+      url: "https://www.ntnu.edu/"
+      location: Campus Kalvskinnet
+      # company overview
+      overview: Norwegian University of Science and Technology has a main profile in science and technology.
+    positions:
+      - designation: Apprentice In ICT
+        start: Aug 2016
+        end: Jul 2018
+        # give some points about what was your responsibilities at the company.
+        responsibilities:
+          - Support users mainly in the Windows ecosystem
+          - Hardware and software troubleshooting
+          - Answering tickets over email and phone in compliance with ITIL
+          - A degree of printer administration and management

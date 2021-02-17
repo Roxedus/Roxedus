@@ -1,0 +1,28 @@
+# section information
+section:
+  name: Erfaring
+  id: experiences
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your experiences
+experiences:
+  - company:
+      name: NTNU
+      url: "https://www.ntnu.no/"
+      location: Campus Kalvskinnet
+      # company overview
+      overview: Norges teknisk-naturvitenskapelige universitet har teknisk-naturvitenskapelig hovedprofil
+    positions:
+      - designation: Lærling i IKT-Servicefag
+        start: Aug 2016
+        end: Jul 2018
+        # give some points about what was your responsibilities at the company.
+        responsibilities:
+          - Brukersupport hovedsaklig i Windows-økosystemet
+          - Feilsøking av programmvare og maskinvare
+          - Bruke telefon og epost som verktøy i samsvar med ITIL
+          - Noe admistrasjon av printere

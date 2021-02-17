@@ -1,0 +1,14 @@
+# some information about you
+name: "Simen Røstvik"
+nickname: "Simen"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hei, jeg er"
+image: "images/simen.png"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "work@rostvik.no"
+
+# some summary about what you do
+summary:
+  - Jeg er glad i servere
+  - Jeg driver med åpen kildekode

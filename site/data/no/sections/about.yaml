@@ -1,0 +1,45 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+resume: files/cv.pdf
+
+# a summary about you
+summary: |
+  En nerd med lidenskap for prosjekter med åpen kildekode, hovedsaklig verktøy rettet mot utrulling.
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+  - name: Email
+    icon: fas fa-envelope
+    url: work@rostvik.no
+
+  - name: Github
+    icon: fab fa-github
+    url: https://github.com/roxedus
+
+  - name: LinkedIn
+    icon: fab fa-linkedin
+    url: https://www.linkedin.com/in/simen-r%C3%B8stvik/
+
+  - name: Twitter
+    icon: fab fa-twitter
+    url: https://twitter.com/Roxedus
+
+# your soft skills
+# give the percentage between 50 to 100 with 5 intervals.
+# currently supported colors: blue, yellow, pink, green, sky, orange
+softSkills:
+  - name: Problemløsing
+    percentage: 75
+    color: yellow
+
+  - name: Lagarbeid
+    percentage: 90
+    color: pink

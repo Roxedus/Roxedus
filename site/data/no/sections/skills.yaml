@@ -1,0 +1,30 @@
+# section information
+section:
+  name: Kunnskap
+  id: skills
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+  - name: Docker
+    logo: images/sections/skills/docker.svg
+    summary: Skrive og vedlikeholde kontainere. Erfering med bygging av kontainere for flere arkitekturer, og over flere steg. Laget flere proseser for testing og bygging av bilder via CI/CD.
+    url: "https://www.docker.com/"
+
+  - name: Nettsky
+    logo: images/sections/skills/cloud.png
+    summary: Brukt flere av de store sky-tilbuderene som GCP, AWS, DO
+
+  - name: Linux
+    logo: images/sections/skills/linux.png
+    summary: Foretrukket server OS. Kan skrie bash/shell skript.
+
+  - name: Git
+    logo: images/sections/skills/git.png
+    summary: Erfaring med å utvikle med versjonskontroll. Mest kjent med Github. har også brukt GitLab og Gitea.
+    url: "https://git-scm.com/"

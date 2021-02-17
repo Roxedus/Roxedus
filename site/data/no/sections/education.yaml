@@ -1,0 +1,55 @@
+# section information
+section:
+  name: Utdanning
+  id: education
+  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  enable: true
+  weight: 5
+  showOnNavbar: false
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+degrees:
+  - name: Generell studiekompatense
+    icon: fa-graduation-cap
+    timeframe: 2018-2019
+    institution:
+      name: Thora Stom videregående skole
+      url: "https://web.trondelagfylke.no/thora-storm-videregaende-skole/"
+    takenCourses:
+      showGrades: true
+      hideScale: true
+      courses:
+        - name: Engelsk
+          achieved: 3
+        - name: Matematikk 2P-Y
+          achieved: 4
+
+  - name: Fagbrev
+    icon: fa-school
+    timeframe: 2015-2019
+    institution:
+      name: Heimdal videregående skole
+      url: "https://web.trondelagfylke.no/heimdal-videregaende-skole"
+    takenCourses:
+      showGrades: true
+      hideScale: true
+      courses:
+        - name: Drift og vedlikehold
+          achieved: 5
+        - name: Bruker- og driftsstøtte
+          achieved: 5
+
+  - icon: fa-school
+    timeframe: 2014-2015
+    institution:
+      name: Tiller videregående skole
+      url: "https://web.trondelagfylke.no/tiller-videregaende-skole"
+    takenCourses:
+      showGrades: true
+      hideScale: true
+      courses:
+        - name: Planlegging
+          achieved: 4
+        - name: Drift og oppfølging
+          achieved: 5

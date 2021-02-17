@@ -1,0 +1,81 @@
+# More documentation here: https://github.com/nicksnyder/go-i18n
+[home]
+other = "Hjem"
+
+[posts]
+other = "Artikler"
+
+[toc_heading]
+other = "innholdsfortegnelse"
+
+[at]
+other = "hos"
+
+[resume]
+other = "Min CV"
+
+[navigation]
+other = "Navigasjon"
+
+[contact_me]
+other = "Kontakt meg:"
+
+[email]
+other = "Epost"
+
+[phone]
+other = "Mobil"
+
+[newsletter_text]
+other = "Hold deg oppdatert med nyhetsbrev"
+
+[newsletter_input_placeholder]
+other = "Oppgi epost"
+
+[newsletter_warning]
+other = "Vi vill ikke dele eposten din med andre"
+
+[submit]
+other = "Send inn"
+
+[hugoAttributionText]
+other = "Drevet av"
+
+[prev]
+other = "Forrige"
+
+[next]
+other = "Neste"
+
+[improve_this_page]
+other = "Forbedre denne siden"
+
+[out_of]
+other = "av"
+
+[publications]
+other = "Publiksjoner"
+
+[taken_courses]
+other = "Fag tatt"
+
+[course_name]
+other = "Fag"
+
+[total_credit]
+other = "Total Credit"
+
+[obtained_credit]
+other = "Karakter"
+
+[extracurricular_activities]
+other = "Fritidsaktiviteter"
+
+[see_more]
+other = "Se mer"
+
+[responsibilities]
+other = "Ansvarsområder:"
+
+[present]
+other = "Nåværende"

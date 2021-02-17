@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "site/**"
+      - ".github/workflows/deploy-hugo.yml"
     branches:
       - main
 
@@ -31,3 +32,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./site/public
+          cname: roxedus.dev

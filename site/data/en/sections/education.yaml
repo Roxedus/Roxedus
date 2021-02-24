@@ -23,7 +23,7 @@ degrees:
         - name: English
           achieved: 3
           outOf: 6
-        - name: 2nd Paractical Mathematics
+        - name: Mathematics 2P
           achieved: 4
           outOf: 6
 
@@ -34,13 +34,13 @@ degrees:
       name: Upper Secondary School
       url: "https://web.trondelagfylke.no/heimdal-videregaende-skole"
     takenCourses:
-      showGrades: true
+      showGrades: false
       hideScale: true
       courses:
         - name: Operation and maintenance
           achieved: 5
           outOf: 6
-        - name: User support
+        - name: User and Operational Support
           achieved: 5
           outOf: 6
 
@@ -51,12 +51,12 @@ degrees:
       name: Upper Secondary School
       url: "https://web.trondelagfylke.no/tiller-videregaende-skole"
     takenCourses:
-      showGrades: true
+      showGrades: false
       hideScale: true
       courses:
         - name: Planning
           achieved: 4
           outOf: 6
-        - name: Opperation and follow-up
+        - name: Operation and Follow-up
           achieved: 5
           outOf: 6

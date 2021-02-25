@@ -3,7 +3,7 @@
 version: 2
 updates:
   - package-ecosystem: "gitsubmodule"
-    directory: "/site"
+    directory: "/"
     schedule:
       interval: "daily"
     labels:

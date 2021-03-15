@@ -79,3 +79,21 @@ other = "Ansvarsområder:"
 
 [present]
 other = "Nåværende"
+
+[comments_javascript]
+other = "Vennligst aktiver JavaScript for å se"
+
+[comments_by]
+other = "kommentarer drevet av"
+
+[read]
+other = "Les"
+
+[project_star]
+other = "Stjern"
+
+[project_details]
+other = "Detaljer"
+
+[err_404]
+other = "Siden du ser etter er ikke her enda."

@@ -71,8 +71,11 @@ other = "Karakter"
 [extracurricular_activities]
 other = "Fritidsaktiviteter"
 
-[see_more]
+[show_more]
 other = "Se mer"
+
+[show_less]
+other = "Se mindre"
 
 [responsibilities]
 other = "Ansvarsområder:"

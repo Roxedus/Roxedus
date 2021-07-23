@@ -3,7 +3,7 @@ section:
   name: Erfaring
   id: experiences
   enable: true
-  weight: 4
+  weight: 3
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true
@@ -11,11 +11,25 @@ section:
 # Your experiences
 experiences:
   - company:
+      name: HEMIT
+      url: "https://hemit.no/"
+      location: Trondheim
+      # company overview
+      overview: Helse Midt-Norge IT har ansvar for sentral drift og forvaltning av felles IKT-systemer for alle sykehusene i helseregionen.
+    positions:
+      - designation: IT Konsulent
+        start: April 2021
+        # give some points about what was your responsibilities at the company.
+        responsibilities:
+          - Prosjektarbeid rettet mot M365
+          - Tilgangstyring (IAM)
+
+  - company:
       name: NTNU
       url: "https://www.ntnu.no/"
       location: Campus Kalvskinnet
       # company overview
-      overview: Norges teknisk-naturvitenskapelige universitet har teknisk-naturvitenskapelig hovedprofil
+      overview: Norges teknisk-naturvitenskapelige universitet har hovedansvar for den høyere teknologiutdanningen i Norge.
     positions:
       - designation: Lærling i IKT-Servicefag
         start: Aug 2016

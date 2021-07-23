@@ -13,7 +13,7 @@ languages:
   "no":
     languageName: Norsk
     weight: 2
-    title: "Simen's side"
+    title: "Simens side"
 
 # Control TOC depth
 markup:

@@ -4,10 +4,8 @@ section:
   id: education
   template: sections/education.html # Use "sections/education-alt.html for alternate template.
   enable: true
-  weight: 5
+  weight: 4
   showOnNavbar: false
-  # Can optionally hide the title in sections
-  # hideTitle: true
 
 degrees:
   - name: Generell studiekompatense
@@ -17,7 +15,7 @@ degrees:
       name: Thora Stom videregående skole
       url: "https://web.trondelagfylke.no/thora-storm-videregaende-skole/"
     takenCourses:
-      showGrades: true
+      showGrades: false
       hideScale: true
       courses:
         - name: Engelsk

@@ -3,7 +3,7 @@ section:
   name: Kunnskap
   id: skills
   enable: true
-  weight: 3
+  weight: 2
   showOnNavbar: true
   # Can optionally hide the title in sections
   # hideTitle: true
@@ -13,18 +13,28 @@ section:
 skills:
   - name: Docker
     logo: images/sections/skills/docker.svg
-    summary: Skrive og vedlikeholde kontainere. Erfering med bygging av kontainere for flere arkitekturer, og over flere steg. Laget flere proseser for testing og bygging av bilder via CI/CD.
+    summary: Skriver og vedlikeholder kontainere. Erfaring med bygging av kontainere for flere arkitekturer, og over flere steg. Laget flere proseser for testing og bygging av bilder via CI/CD.
     url: "https://www.docker.com/"
 
   - name: Nettsky
     logo: images/sections/skills/cloud.png
-    summary: Brukt flere av de store sky-tilbuderene som GCP, AWS, DO
+    summary: Brukt flere av de store sky-tilbuderene som GCP, AWS, DO.
 
   - name: Linux
     logo: images/sections/skills/linux.png
-    summary: Foretrukket server OS. Kan skrie bash/shell skript.
+    summary: Kjører all infrastruktur på Linux/GNU, stort sett på Ubuntu
 
   - name: Git
     logo: images/sections/skills/git.png
     summary: Erfaring med å utvikle med versjonskontroll. Mest kjent med Github. har også brukt GitLab og Gitea.
     url: "https://git-scm.com/"
+
+  - name: Python
+    logo: images/sections/skills/python.svg
+    summary: Har automatisert en del oppgaver som ville ellers ha vært manuelt arbeid, brukt rammeverk som BeautifulSoup og Jinja.
+    url: "https://www.python.org/"
+
+  - name: Ansible
+    logo: images/sections/skills/ansible.svg
+    summary: Brukt ansible til å sette opp, og vedlikeholde infrastruktur jeg bruker i hverdagen.
+    url: "https://www.ansible.com/"

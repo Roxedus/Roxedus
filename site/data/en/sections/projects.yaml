@@ -22,9 +22,9 @@ projects:
   - name: Linuxserver.io
     logo: images/sections/projects/lsio.png
     role: Member
-    timeline: "January 2020 - Present"
+    timeline: "January 2021 - Present"
     url: https://www.linuxserver.io/
-    summary: Developer and maintainer of popular Docker images used in the homeserver space
+    summary: Developer and maintainer of popular Docker images used in the homeserver space, with over 16 billion pulls on DockerHub
     tags: ["hobby", "lsio", "docker"]
 
   - name: ShiteMusicBot

@@ -15,11 +15,12 @@ Some guy from Norway learning by doing, sometimes writing about my newfound know
 
 Currently learning:
 
-* Ansible
 * K*S
+* Terraform
 
 Comfortable with:
 
+* Ansible
 * Bash
 * Docker
 * Python, especially Discord.py

@@ -11,6 +11,19 @@ section:
 # Your experiences
 experiences:
   - company:
+      name: HEMIT
+      url: "https://hemit.no/om-oss-hemit/about-us"
+      location: Trondheim
+      # company overview
+      overview: Central Norway Regional Health Authority's IT department
+    positions:
+      - designation: IT Consultant
+        start: April 2021
+        responsibilities:
+          - Deploying M365 to the end-user
+          - Identity and Access Management
+
+  - company:
       name: NTNU
       url: "https://www.ntnu.edu/"
       location: Campus Kalvskinnet

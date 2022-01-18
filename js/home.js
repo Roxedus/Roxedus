@@ -338,6 +338,7 @@ var projectCards;
     // re-render custom functions on window resize
     window.onresize = function () {
       detectDevice();
+      adjustSkillCardsHeight();
       adjustRecentPostsHeight();
       showAchievements();
     };

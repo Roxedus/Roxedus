@@ -1,5 +1,4 @@
 name: Deploy to Github Pages
-
 on:
   push:
     paths:
@@ -7,7 +6,6 @@ on:
       - ".github/workflows/deploy-hugo.yml"
     branches:
       - main
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -16,17 +14,14 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2.5.0
         id: install
         with:
           hugo-version: "0.87.0"
           extended: true
-
       - name: Build
         run: hugo -s ./site --minify
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
         with:

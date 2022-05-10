@@ -19,6 +19,7 @@ experiences:
     positions:
       - designation: IT Consultant
         start: April 2021
+        end: Jul 2022
         responsibilities:
           - Deploying M365 to the end-user
           - Rolling out, and enforcing password policies

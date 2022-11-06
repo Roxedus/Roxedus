@@ -30,6 +30,10 @@ socialLinks:
     icon: fab fa-twitter
     url: https://twitter.com/Roxedus
 
+  - name: Mastodon
+    icon: fab fa-mastodon
+    url: https://mastodon.linuxserver.io/@roxedus
+
 # your soft skills
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange

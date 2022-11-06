@@ -33,6 +33,10 @@ socialLinks:
     icon: fab fa-twitter
     url: https://twitter.com/Roxedus
 
+  - name: Mastodon
+    icon: fab fa-mastodon
+    url: https://mastodon.linuxserver.io/@roxedus
+
 softSkills:
   - name: Problemløsing
     percentage: 75

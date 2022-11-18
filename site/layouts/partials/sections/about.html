@@ -34,7 +34,7 @@
             {{ else if eq .name (i18n "phone") }}
               <a href="tel:{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"><i class="{{ .icon }}"></i></a>
             {{ else if eq .name "Mastodon" }}
-              <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener,me"><i class="{{ .icon }}"></i></a>
+              <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener me"><i class="{{ .icon }}"></i></a>
             {{ else }}
               <a href="{{ .url }}" title="{{ .name }}" target="_blank" rel="noopener"><i class="{{ .icon }}"></i></a>
             {{ end }}

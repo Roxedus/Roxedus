@@ -11,6 +11,18 @@ section:
 # Your experiences
 experiences:
   - company:
+      name: Crayon AS
+      url: "https://crayon.com/no/"
+      location: Oslo
+    positions:
+      - designation: Konsulent
+        start: August 2022
+        # give some points about what was your responsibilities at the company.
+        responsibilities:
+          - Infrastruktur som kode, Terraform
+          - Automasjon med PowerShell
+
+  - company:
       name: HEMIT
       url: "https://hemit.no/"
       location: Trondheim

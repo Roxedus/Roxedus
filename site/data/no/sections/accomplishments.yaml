@@ -1,0 +1,30 @@
+# section information
+section:
+  name: Prestasjoner
+  id: accomplishments
+  enable: true
+  weight: 6
+  showOnNavbar: false
+
+# Your accomplishments
+accomplishments:
+  - name: "Microsoft Certified: DevOps Engineer Expert"
+    timeline: "Oktober 2022 - Oktober 2023"
+    organization:
+      name: Microsoft
+      url: https://www.microsoft.com/
+    certificateURL: https://www.credly.com/earner/earned/badge/b155d73d-9fb2-404e-81cc-8a3a4f178b58
+
+  - name: "Microsoft Certified: Azure Administrator Associate"
+    timeline: "Oktober 2022 - Oktober 2023"
+    organization:
+      name: Microsoft
+      url: https://www.microsoft.com/
+    certificateURL: https://www.credly.com/earner/earned/badge/fcaac34e-5e2e-4fe8-a798-f573ce6e82a1
+
+  - name: "HashiCorp Certified: Terraform Associate (002)"
+    timeline: "August 2022 - August 2024"
+    organization:
+      name: HashiCorp
+      url: https://www.hashicorp.com/
+    certificateURL: https://www.credly.com/earner/earned/badge/9231be1e-4d65-48a1-8eaf-f7e872015b19

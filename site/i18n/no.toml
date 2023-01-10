@@ -100,3 +100,6 @@ other = "Detaljer"
 
 [err_404]
 other = "Siden du ser etter er ikke her enda."
+
+[view_certificate]
+other = "Se sertifikat"

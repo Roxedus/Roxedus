@@ -1,5 +1,5 @@
 # Copyright Notice
-copyright: © 2022 Copyright.
+copyright: © 2023 Copyright.
 
 # Meta description for your site.  This will help the search engines to find your site.
 description: Portfolio of Simen Røstvik.
@@ -7,3 +7,10 @@ description: Portfolio of Simen Røstvik.
 customMenus:
   - name: Blog
     url: https://nonsense.fyi/
+
+openGraph:
+  title: Simen's Page
+  type: website
+  description: Portfolio and personal blog of Simen Røstvik.
+  image: images/simen.png
+  url: https://roxedus.dev

@@ -1,7 +1,14 @@
-copyright: © 2022 Kopirett.
+copyright: © 2023 Kopirett.
 
 description: Simen Røstvik sin portefølje.
 
 customMenus:
   - name: Blogg
     url: https://nonsense.fyi/
+
+openGraph:
+  title: Simens side
+  type: website
+  description: Portfolio for Simen Røstvik.
+  image: images/simen.png
+  url: https://roxedus.dev

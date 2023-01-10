@@ -1,202 +1,25 @@
-<!doctype html><html>
-<head>
-<title>Notes</title>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<link rel=preconnect href=https://hosted.roxedus.net>
-<script async defer data-domain=roxedus.dev src=https://hosted.roxedus.net/js/index.js></script>
-<link rel=stylesheet href=/css/bootstrap.min.css>
-<link rel=stylesheet href=/css/layouts/main.css>
-<link rel=stylesheet href=/css/navigators/navbar.css>
-<link rel=stylesheet href=/css/plyr.css>
-<link rel=stylesheet href=/css/flag-icon.min.css>
-<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
-<link rel=icon type=image/png href=/images/animoji_hub662d365fdd778d20be57bb81f0449a5_42052_42x0_resize_box_3.png>
-<meta property="og:title" content="Notes">
-<meta property="og:description" content>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://roxedus.dev/notes/"><meta property="og:site_name" content="Simen's Page">
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
-<link rel=stylesheet href=/css/layouts/notes.css>
-<link rel=stylesheet href=/css/navigators/sidebar.css>
-</head>
-<body data-spy=scroll data-target=#TableOfContents data-offset=80>
-<div class="container-fluid bg-dimmed wrapper">
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
-<div class=container>
-<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
-<span class=navbar-toggler-icon></span>
-</button>
-<a class=navbar-brand href=/>
-<img src=/images/animoji_hub662d365fdd778d20be57bb81f0449a5_42052_42x0_resize_box_3.png alt=Logo>
+<!doctype html><html><head><title>Notes</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=preconnect href=https://hosted.roxedus.net><script async defer data-domain=roxedus.dev src=https://hosted.roxedus.net/js/index.js></script>
+<link rel=me href=https://mastodon.linuxserver.io/@roxedus><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/navigators/navbar.css><link rel=stylesheet href=/css/plyr.css><link rel=stylesheet href=/css/flag-icon.min.css><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><link rel=icon type=image/png href=/images/animoji_hub662d365fdd778d20be57bb81f0449a5_42052_42x0_resize_box_3.png><meta property="og:title" content="Notes"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://roxedus.dev/notes/"><meta property="og:site_name" content="Simen's Page"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/notes.css><link rel=stylesheet href=/css/navigators/sidebar.css></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/animoji_hub662d365fdd778d20be57bb81f0449a5_42052_42x0_resize_box_3.png alt=Logo>
 Simen's Page</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
-<span class=navbar-toggler-icon></span>
-</button>
-<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
-<ul class="navbar-nav ml-auto">
-</ul>
-</div>
-</div>
-<img src=/images/animoji_hub662d365fdd778d20be57bb81f0449a5_42052_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
-<img src=/images/animoji_transp_hudcf27fd40e63ef4d97b094da417ab7d4_20629_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo">
-</nav>
-<section class=sidebar-section id=sidebar-section>
-<div class=sidebar-holder>
-<div class=sidebar id=sidebar>
-<form class=mx-auto method=get action=/search>
-<input type=text name=keyword placeholder=Search data-search id=search-box>
-</form>
-<div class=sidebar-tree>
-<ul class=tree id=tree>
-<li id=list-heading><a href=/notes data-filter=all>Notes</a></li>
-<div class=subtree>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/notes/docker/>Docker</a>
-<ul>
-<li><a href=/notes/docker/lsio/ title=LSIO>LSIO</a></li>
-<li><a href=/notes/docker/development/ title=Dev>Dev</a></li>
-</ul>
-</li>
-</div>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section class=content-section id=content-section>
-<div class="content container-fluid" id=content>
-<div class="container-fluid note-card-holder" id=note-card-holder>
-<div class=note-card>
-<div class=item>
-<h5 class=note-title><span>Jenkins builder run</span></h5>
-<div class=card>
-<div class=card-body><p>Runs the <a href=https://github.com/linuxserver/docker-jenkins-builder>Jenkins builder</a> on a local repo, for keeping it in sync.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>alias sync<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;docker pull </span><span style=color:#e6db74>${</span>builder:=lscr.io/linuxserver/jenkins-builder<span style=color:#ae81ff>\:</span>latest<span style=color:#e6db74>}</span><span style=color:#e6db74> &amp;&amp; \
-</span><span style=color:#e6db74>docker run --rm \
-</span><span style=color:#e6db74>  -v </span><span style=color:#66d9ef>$(</span>pwd<span style=color:#66d9ef>)</span><span style=color:#e6db74>:/tmp \
-</span><span style=color:#e6db74>  -e LOCAL=true \
-</span><span style=color:#e6db74>  -e PUID=</span><span style=color:#66d9ef>$(</span>id -u<span style=color:#66d9ef>)</span><span style=color:#e6db74> -e PGID=</span><span style=color:#66d9ef>$(</span>id -g<span style=color:#66d9ef>)</span><span style=color:#e6db74> \
-</span><span style=color:#e6db74>  </span><span style=color:#e6db74>${</span>builder:=lscr.io/linuxserver/jenkins-builder<span style=color:#ae81ff>\:</span>latest<span style=color:#e6db74>}</span><span style=color:#e6db74> &amp;&amp; \
-</span><span style=color:#e6db74>rm -rf .jenkins-external&#34;</span>
-</code></pre></div></div>
-</div>
-</div>
-</div>
-<div class=note-card>
-<div class=item>
-<h5 class=note-title><span>Quick, desposable test-container</span></h5>
-<div class=card>
-<div class=card-body><ul>
-<li>Tty in interactive mode. <code>-it</code></li>
-<li>Predictable name. <code>--name=test</code></li>
-<li>Disposable. <code>--rm</code></li>
-<li>Preventes most common orphaned volumes. <code>--tmpfs /config:rw</code></li>
-<li>LSIO ready. <code>-e TZ=${TZ} -e PUID=${PUID} -e PGID=${PGID}</code></li>
-</ul>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>alias tester<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;docker run --rm -it \
-</span><span style=color:#e6db74>  --name=test --tmpfs /config:rw \
-</span><span style=color:#e6db74>  -e TZ=</span><span style=color:#e6db74>${</span>TZ<span style=color:#e6db74>}</span><span style=color:#e6db74> -e PUID=</span><span style=color:#e6db74>${</span>PUID<span style=color:#e6db74>}</span><span style=color:#e6db74> -e PGID=</span><span style=color:#e6db74>${</span>PGID<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
-</code></pre></div></div>
-</div>
-</div>
-</div>
-<div class=note-card>
-<div class=item>
-<h5 class=note-title><span>Shell access to mentioned test-container</span></h5>
-<div class=card>
-<div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>alias texec<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;docker exec -it test /bin/bash&#34;</span>
-</code></pre></div></div>
-</div>
-</div>
-</div>
-<div class=note-card>
-<div class=item>
-<h5 class=note-title><span>Dive</span></h5>
-<div class=card>
-<div class=card-body><p>Alias for <a href=https://github.com/wagoodman/dive>Dive</a>.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>alias dive<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;docker run --rm -it --name=dive -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest&#34;</span>
-</code></pre></div></div>
-</div>
-</div>
-</div>
-</div>
-<div class=paginator>
-<ul class="pagination pagination-default">
-<li class="page-item disabled">
-<a aria-disabled=true aria-label=First class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;&#171;</span></a>
-</li>
-<li class="page-item disabled">
-<a aria-disabled=true aria-label=Previous class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;</span></a>
-</li>
-<li class="page-item active">
-<a aria-current=page aria-label="Page 1" class=page-link role=button>1</a>
-</li>
-<li class=page-item>
-<a href=/notes/page/2/ aria-label="Page 2" class=page-link role=button>2</a>
-</li>
-<li class=page-item>
-<a href=/notes/page/2/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
-</li>
-<li class=page-item>
-<a href=/notes/page/2/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
-</li>
-</ul>
-</div>
-</div>
-</section>
-</div>
-<footer id=footer class="container-fluid text-center align-content-center footer pb-2">
-<div class="container pt-5">
-<div class="row text-left">
-<div class="col-md-4 col-sm-12">
-<h5>Navigation</h5>
-<ul>
-<li class=nav-item>
-<a class=smooth-scroll href=https://roxedus.dev#about>About</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=https://roxedus.dev#projects>Projects</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=https://roxedus.dev#skills>Skills</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=https://roxedus.dev#experiences>Experiences</a>
-</li>
-</ul>
-</div>
-<div class="col-md-4 col-sm-12">
-<h5>Contact me:</h5>
-<ul>
-<li><a href=mailto:work@rostvik.no target=_blank rel=noopener>
-<span><i class="fas fa-envelope"></i></span> <span>work@rostvik.no</span>
-</a></li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-<div class=container>
-<div class="row text-left">
-<div class=col-md-4>
-<a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener>
-<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
-Toha
-</a>
-</div>
-<div class="col-md-4 text-center">© 2022 Copyright.</div>
-<div class="col-md-4 text-right">
-<a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
-<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
-</a>
-</div>
-</div>
-</div>
-</footer>
-<script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"></ul></div></div><img src=/images/animoji_hub662d365fdd778d20be57bb81f0449a5_42052_42x0_resize_box_3.png class=d-none id=main-logo alt=Logo>
+<img src=/images/animoji_transp_hudcf27fd40e63ef4d97b094da417ab7d4_20629_42x0_resize_box_3.png class=d-none id=inverted-logo alt="Inverted Logo"></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><form class=mx-auto method=get action=/search><input type=text name=keyword placeholder=Search data-search id=search-box></form><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/notes data-filter=all>Notes</a></li><div class=subtree><li><i class="fas fa-plus-circle"></i><a href=/notes/docker/>Docker</a><ul><li><a href=/notes/docker/lsio/ title=LSIO>LSIO</a></li><li><a href=/notes/docker/development/ title=Dev>Dev</a></li></ul></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid note-card-holder" id=note-card-holder><div class=note-card><div class=item><h5 class=note-title><span>Jenkins builder run</span></h5><div class=card><div class=card-body><p>Runs the <a href=https://github.com/linuxserver/docker-jenkins-builder target=_blank rel=noopener>Jenkins builder</a> on a local repo, for keeping it in sync.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>alias sync<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;docker pull </span><span style=color:#e6db74>${</span>builder:=lscr.io/linuxserver/jenkins-builder<span style=color:#ae81ff>\:</span>latest<span style=color:#e6db74>}</span><span style=color:#e6db74> &amp;&amp; \
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>docker run --rm \
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  -v </span><span style=color:#66d9ef>$(</span>pwd<span style=color:#66d9ef>)</span><span style=color:#e6db74>:/tmp \
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  -e LOCAL=true \
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  -e PUID=</span><span style=color:#66d9ef>$(</span>id -u<span style=color:#66d9ef>)</span><span style=color:#e6db74> -e PGID=</span><span style=color:#66d9ef>$(</span>id -g<span style=color:#66d9ef>)</span><span style=color:#e6db74> \
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  </span><span style=color:#e6db74>${</span>builder:=lscr.io/linuxserver/jenkins-builder<span style=color:#ae81ff>\:</span>latest<span style=color:#e6db74>}</span><span style=color:#e6db74> &amp;&amp; \
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>rm -rf .jenkins-external&#34;</span>
+</span></span></code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Quick, desposable test-container</span></h5><div class=card><div class=card-body><ul><li>Tty in interactive mode. <code>-it</code></li><li>Predictable name. <code>--name=test</code></li><li>Disposable. <code>--rm</code></li><li>Preventes most common orphaned volumes. <code>--tmpfs /config:rw</code></li><li>LSIO ready. <code>-e TZ=${TZ} -e PUID=${PUID} -e PGID=${PGID}</code></li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>alias tester<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;docker run --rm -it \
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  --name=test --tmpfs /config:rw \
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  -e TZ=</span><span style=color:#e6db74>${</span>TZ<span style=color:#e6db74>}</span><span style=color:#e6db74> -e PUID=</span><span style=color:#e6db74>${</span>PUID<span style=color:#e6db74>}</span><span style=color:#e6db74> -e PGID=</span><span style=color:#e6db74>${</span>PGID<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
+</span></span></code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Shell access to mentioned test-container</span></h5><div class=card><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>alias texec<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;docker exec -it test /bin/bash&#34;</span>
+</span></span></code></pre></div></div></div></div></div><div class=note-card><div class=item><h5 class=note-title><span>Dive</span></h5><div class=card><div class=card-body><p>Alias for <a href=https://github.com/wagoodman/dive target=_blank rel=noopener>Dive</a>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>alias dive<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;docker run --rm -it --name=dive -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest&#34;</span>
+</span></span></code></pre></div></div></div></div></div></div><div class=paginator><ul class="pagination pagination-default"><li class="page-item disabled"><a aria-disabled=true aria-label=First class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;&#171;</span></a></li><li class="page-item disabled"><a aria-disabled=true aria-label=Previous class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;</span></a></li><li class="page-item active"><a aria-current=page aria-label="Page 1" class=page-link role=button>1</a></li><li class=page-item><a href=/notes/page/2/ aria-label="Page 2" class=page-link role=button>2</a></li><li class=page-item><a href=/notes/page/2/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a></li><li class=page-item><a href=/notes/page/2/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a></li></ul></div></div></section></div><footer id=footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=https://roxedus.dev#about>About</a></li><li class=nav-item><a class=smooth-scroll href=https://roxedus.dev#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=https://roxedus.dev#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=https://roxedus.dev#experiences>Experiences</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><a href=mailto:work@rostvik.no target=_blank rel=noopener><span><i class="fas fa-envelope"></i></span> <span>work@rostvik.no</span></a></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hugo-toha/toha target=_blank rel=noopener><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png alt="Toha Theme Logo">
+Toha</a></div><div class="col-md-4 text-center">© 2023 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/ target=_blank rel=noopener>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script type=text/javascript src=/js/jquery-3.4.1.min.js></script>
 <script type=text/javascript src=/js/popper.min.js></script>
 <script type=text/javascript src=/js/bootstrap.min.js></script>
 <script type=text/javascript src=/js/navbar.js></script>
@@ -205,6 +28,4 @@ Toha
 <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
 <script src=/js/imagesloaded.pkgd.min.js></script>
 <script src=/js/note.js></script>
-<script>hljs.initHighlightingOnLoad()</script>
-</body>
-</html>
+<script>hljs.initHighlightingOnLoad()</script></body></html>

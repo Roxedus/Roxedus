@@ -8,10 +8,11 @@ section:
 
 resume: files/cv.pdf
 
-designation: IT Konsulent
+designation: Konsulent
+
 company:
-  name: Helse Midt-Norge IT
-  url: "https://hemit.no/"
+  name: Crayon
+  url: "https://www.crayon.com/no/"
 
 summary: |
   En nerd med lidenskap for automatisering, åpen kildekode og kontainere.

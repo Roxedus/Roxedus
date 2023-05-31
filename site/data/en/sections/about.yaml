@@ -7,6 +7,13 @@ section:
   showOnNavbar: true
   template: sections/about.html
 
+designation: Consultant
+
+company:
+  name: Crayon
+  url: "https://www.crayon.com/"
+
+
 # a summary about you
 summary: |
   A tech geek passionate for open-source projects, with a focus on deployment and management.

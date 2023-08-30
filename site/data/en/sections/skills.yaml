@@ -18,7 +18,7 @@ skills:
 
   - name: Cloud Computing
     logo: images/sections/skills/cloud.png
-    summary: Worked with most of the major clouds such as GCP, AWS, DO
+    summary: Worked with most of the major clouds such as Azure, GCP and AWS.
 
   - name: Linux
     logo: images/sections/skills/linux.png
@@ -38,3 +38,8 @@ skills:
     logo: images/sections/skills/ansible.svg
     summary: I use Ansible to deploy and maintain infrasctruture I use daily.
     url: "https://www.ansible.com/"
+
+  - name: Kubernetes
+    logo: images/sections/skills/kubernetes.svg
+    summary: Managing private Infrastructure running on Kubernernetes.
+    url: "https://kubernetes.io/"

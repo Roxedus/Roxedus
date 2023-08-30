@@ -18,7 +18,7 @@ skills:
 
   - name: Nettsky
     logo: images/sections/skills/cloud.png
-    summary: Brukt flere av de store sky-tilbuderene som GCP, AWS, DO.
+    summary: Brukt flere av de store sky-tilbuderene som Azure, GCP og AWS.
 
   - name: Linux
     logo: images/sections/skills/linux.png
@@ -38,3 +38,8 @@ skills:
     logo: images/sections/skills/ansible.svg
     summary: Brukt ansible til å sette opp, og vedlikeholde infrastruktur jeg bruker i hverdagen.
     url: "https://www.ansible.com/"
+
+  - name: Kubernetes
+    logo: images/sections/skills/kubernetes.svg
+    summary: Kjører intern infrastruktur med Kubernetes
+    url: "https://kubernetes.io/"

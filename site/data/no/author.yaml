@@ -1,11 +1,11 @@
 name: "Simen Røstvik"
 nickname: "Simen"
 greeting: "Hei, jeg er"
-image: "images/simen.png"
+image: "images/simen.jpg"
 contactInfo:
   email: "work@rostvik.no"
 
 # some summary about what you do
 summary:
   - Jeg ❤️ automasjon
-  - Jeg bidrar med åpen kildekode
+  - Jeg bidrar til åpen kildekode

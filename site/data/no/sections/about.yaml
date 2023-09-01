@@ -8,11 +8,11 @@ section:
 
 resume: files/cv.pdf
 
-designation: Konsulent
+designation: Plattformingeniør
 
 company:
-  name: Crayon
-  url: "https://www.crayon.com/no/"
+  name: Sopra Steria
+  url: "https://www.soprasteria.no/"
 
 summary: |
   En nerd med lidenskap for automatisering, åpen kildekode og kontainere.
@@ -29,10 +29,6 @@ socialLinks:
   - name: LinkedIn
     icon: fab fa-linkedin
     url: https://www.linkedin.com/in/simen-r%C3%B8stvik/
-
-  - name: Twitter
-    icon: fab fa-twitter
-    url: https://twitter.com/Roxedus
 
   - name: Mastodon
     icon: fab fa-mastodon

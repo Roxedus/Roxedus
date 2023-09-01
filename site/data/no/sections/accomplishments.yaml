@@ -13,32 +13,39 @@ accomplishments:
     organization:
       name: Microsoft
       url: https://www.microsoft.com/
-    certificateURL: https://www.credly.com/earner/earned/badge/b155d73d-9fb2-404e-81cc-8a3a4f178b58
+    certificateURL: https://www.credly.com/badges/b155d73d-9fb2-404e-81cc-8a3a4f178b58
 
   - name: "Microsoft Certified: Azure Administrator Associate"
     timeline: "Oktober 2022 - Oktober 2024"
     organization:
       name: Microsoft
       url: https://www.microsoft.com/
-    certificateURL: https://www.credly.com/earner/earned/badge/fcaac34e-5e2e-4fe8-a798-f573ce6e82a1
+    certificateURL: https://www.credly.com/badges/fcaac34e-5e2e-4fe8-a798-f573ce6e82a1
 
   - name: "HashiCorp Certified: Terraform Associate (002)"
     timeline: "August 2022 - August 2024"
     organization:
       name: HashiCorp
       url: https://www.hashicorp.com/
-    certificateURL: https://www.credly.com/earner/earned/badge/9231be1e-4d65-48a1-8eaf-f7e872015b19
+    certificateURL: https://www.credly.com/badges/9231be1e-4d65-48a1-8eaf-f7e872015b19
 
   - name: "CKA: Certified Kubernetes Administrator"
     timeline: "Januar 2022 - Januar 2026"
     organization:
       name: The Linux Foundation
       url: https://www.linuxfoundation.org/
-    certificateURL: https://www.credly.com/earner/earned/badge/fa7ecd27-a7c0-4167-9baa-0cbe1468de10
+    certificateURL: https://www.credly.com/badges/fa7ecd27-a7c0-4167-9baa-0cbe1468de10
 
   - name: "CKAD: Certified Kubernetes Application Developer"
     timeline: "Februar 2022 - Februar 2026"
     organization:
       name: The Linux Foundation
       url: https://www.linuxfoundation.org/
-    certificateURL: https://www.credly.com/earner/earned/badge/f450a030-46d8-42e2-ad77-bc1205fd9a33
+    certificateURL: https://www.credly.com/badges/f450a030-46d8-42e2-ad77-bc1205fd9a33
+
+  - name: "CKS: Certified Kubernetes Security Specialist"
+    timeline: "August 2022 - August 2025"
+    organization:
+      name: The Linux Foundation
+      url: https://www.linuxfoundation.org/
+    certificateURL: https://www.credly.com/badges/f450a030-46d8-42e2-ad77-bc1205fd9a33

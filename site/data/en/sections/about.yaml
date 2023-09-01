@@ -7,11 +7,11 @@ section:
   showOnNavbar: true
   template: sections/about.html
 
-designation: Consultant
+designation: Engineer
 
 company:
-  name: Crayon
-  url: "https://www.crayon.com/"
+  name: Sopra Steria
+  url: "https://www.soprasteria.com/"
 
 
 # a summary about you
@@ -32,10 +32,6 @@ socialLinks:
   - name: LinkedIn
     icon: fab fa-linkedin
     url: https://www.linkedin.com/in/simen-r%C3%B8stvik/
-
-  - name: Twitter
-    icon: fab fa-twitter
-    url: https://twitter.com/Roxedus
 
   - name: Mastodon
     icon: fab fa-mastodon

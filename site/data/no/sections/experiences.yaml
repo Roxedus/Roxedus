@@ -11,15 +11,28 @@ section:
 # Your experiences
 experiences:
   - company:
+      name: Sopra Steria
+      url: "https://www.soprasteria.no/"
+      location: Oslo
+    positions:
+      - designation: Plattformingeniør
+        start: September 2023
+        # give some points about what was your responsibilities at the company.
+        responsibilities:
+          - Infrastruktur som kode
+
+  - company:
       name: Crayon AS
       url: "https://crayon.com/no/"
       location: Oslo
     positions:
       - designation: Konsulent
         start: August 2022
+        end: August 2023
         # give some points about what was your responsibilities at the company.
         responsibilities:
           - Infrastruktur som kode, Terraform
+          - Cloud Adoption Framework og landingsoner i Azure
           - Automasjon med PowerShell
 
   - company:

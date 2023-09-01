@@ -11,15 +11,28 @@ section:
 # Your experiences
 experiences:
   - company:
+      name: Sopra Steria
+      url: "https://www.soprasteria.no/"
+      location: Oslo
+    positions:
+      - designation: Engineer, Cloud Native
+        start: September 2023
+        # give some points about what was your responsibilities at the company.
+        responsibilities:
+          - Infrastructure as Code
+
+  - company:
       name: Crayon AS
       url: "https://crayon.com/no/"
       location: Oslo
     positions:
       - designation: Consultant
         start: August 2022
+        end: August 2023
         # give some points about what was your responsibilities at the company.
         responsibilities:
           - Infrastructure as Code, Terraform
+          - Cloud Adoption Framework with landingzones in Azure
           - Automation with PowerShell
 
   - company:

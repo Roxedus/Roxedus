@@ -1,5 +1,6 @@
 name: Deploy to Github Pages
 on:
+  workflow_dispatch:
   push:
     paths:
       - "site/**"
@@ -14,14 +15,26 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
+      - uses: actions/checkout@v4
+        with:
+          repository: Roxedus/Talks
+          path: upstream_talks
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2.6.0
         id: install
         with:
           hugo-version: "0.109.0"
           extended: true
+      - uses: extractions/setup-just@v1
       - name: Build
         run: hugo -s ./site --minify
+      - name: Talks
+        run: mkdir ./site/public/talks
+      - name: Build Docker talk files
+        working-directory: upstream_talks
+        run: just static docker
+      - name: Move Docker talk
+        run: mv upstream_talks/docker/_site site/public/talks/docker
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.9.3
         with:

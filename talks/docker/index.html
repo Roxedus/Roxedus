@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+    <link rel="stylesheet" href="./_assets/custom.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+# Docker
+
+En lite teknisk gjennomgang av en teknikker
+
+- Hva er det til?
+- Hvordan bruker man det?
+- Er det farlig?!
+</script></section><section ><section data-markdown><script type="text/template">
+# Simen Røstvik
+
+<div id="right">
+
+![rox](https://raw.githubusercontent.com/Roxedus/Roxedus/main/site/assets/images/simen.jpg) <!-- .element: width="70%"-->
+
+</div>
+
+<div id="left">
+
+- Ikke programmerer
+- Trønder
+- 25
+- Oslo
+
+</div>
+</script></section><section data-markdown><script type="text/template">
+# Linuxserver
+
+- 19 Milliarder
+- 2016
+    - 2021
+
+<aside class="notes"><ul>
+<li>Pulls på dockerhub</li>
+<li>Prosjekter fra 2016, involvert fra 2021</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">
+# Sopra Steria
+
+- September 2023
+- Cloud Native Community
+- IaC
+</script></section></section><section  data-markdown><script type="text/template">
+# Hva er det til
+
+- Isolering av applikasjoner
+    - Prosesser, minne, nettverk
+    - Reproduserbarhet
+- Kan være kode <!-- .element: class="fragment" data-fragment-index="1" -->
+- Verktøykasse <!-- .element: class="fragment" data-fragment-index="2" -->
+
+<aside class="notes"><ul>
+<li>Hovedformål<ul>
+<li>Isolerer prosesser som standard<ul>
+<li>Nettverk er ikke helt isolert som standard<ul>
+<li>Docker compose custom network</li>
+</ul>
+</li>
+<li>Applikasjoner er isolert fordi lagring og prosesser er</li>
+<li>Kan dele andre ressurser ved behov</li>
+</ul>
+</li>
+<li>Kan reprodusere miljø på OS og pakke nivå<ul>
+<li>Ikke immun mot kernel og hardware-endringer</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ikke et direkte IaC verktøy, men kan deklarere en konteiner som kode<ul>
+<li>Passer inn blant kodebasen i versjkonkontroll</li>
+<li>Bygg kan versjoneres</li>
+</ul>
+</li>
+<li>Kan kjøre mer enn en applikasjon<ul>
+<li>VNC</li>
+<li>Shell alias</li>
+<li>Utviklermiljø</li>
+</ul>
+</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+# Hvordan
+
+- Opprett
+    - Bygg
+    - Del
+- Kjør <!-- .element: class="fragment" data-fragment-index="1" -->
+
+<aside class="notes"><ul>
+<li>Flere måter å lage et bilde på<ul>
+<li>Dockerfile, IaC<ul>
+<li>Relativt lett å få oversikt</li>
+<li>Containerfile</li>
+</ul>
+</li>
+<li>Lage &quot;snapshot&quot; med Docker Commit</li>
+<li>Rootfs som tarball</li>
+</ul>
+</li>
+<li>Et bygget bilde kan deles<ul>
+<li>Registry som dockerhub, ghcr <a href="https://www.linuxserver.io/blog/docker-team-changes">https://www.linuxserver.io/blog/docker-team-changes</a></li>
+<li>Tar-arkiv</li>
+</ul>
+</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+# Hæ
+
+- Image/bilde
+- Container/konteiner
+- Registry/register
+</script></section><section ><section data-markdown><script type="text/template">
+# Opprett
+
+```dockerfile [1|3-7]
+FROM nginx:1.24
+
+RUN \
+    apt-get update && \
+    apt-get install -y --no-install-recommends git && \
+    git clone https://github.com/Norsk-Programmering/Website && \
+    cp -R /Website/public/* /usr/share/nginx/html
+```
+
+<aside class="notes"><ul>
+<li>Baserer oss på, kjører en nginx ut av boksen<ul>
+<li>Tagget som 1.24</li>
+</ul>
+</li>
+<li>Vanlig Debian flow<ul>
+<li>Oppdater lokal repo, installer git</li>
+<li>Klon repo</li>
+<li>Flytt html</li>
+</ul>
+</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">
+# Bygg
+<!-- .slide: data-auto-animate -->
+<!-- .element: data-id="build-animation"-->
+
+```shell [2|3|4]
+docker \
+    build \
+    -t ghcr.io/norsk-programmering/website \
+    .
+```
+<aside class="notes"><ul>
+<li>Build</li>
+<li>Tag<ul>
+<li>Latest</li>
+</ul>
+</li>
+<li>Kontekst</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">
+# Bygg
+<!-- .slide: data-auto-animate data-trim data-line-numbers-->
+<!-- .element: data-id="build-animation"-->
+
+```shell [4]
+docker \
+    build \
+    -t ghcr.io/norsk-programmering/website \
+    .
+```
+
+<video data-preload data-autoplay src="assets/build.mp4"></video>
+</script></section></section><section  data-markdown><script type="text/template">
+# Del
+
+```shell [2]
+docker \
+    push \
+    ghcr.io/norsk-programmering/website:latest
+```
+
+<aside class="notes"><ul>
+<li>Dyttes til Github Container Registry</li>
+</ul>
+</aside></script></section><section ><section data-markdown><script type="text/template">
+# Kjør
+<!-- .slide: data-auto-animate data-trim data-line-numbers-->
+<!-- .element: data-id="run-animation"-->
+
+- Hent bilde
+    ```shell [2]
+    docker \
+        pull \
+        ghcr.io/norsk-programmering/website:latest
+    ```
+- Kjør
+    ```shell [2|3|4|5|6]
+    docker \
+        run \
+        -p 8080:80 \
+        --name norprog \
+        --rm \
+        ghcr.io/norsk-programmering/website:latest
+    ```
+
+<aside class="notes"><ul>
+<li>Kan være på en annen maskin<ul>
+<li><code>docker login</code></li>
+</ul>
+</li>
+<li>Hent bilde fra GHCR</li>
+<li>Kjør<ul>
+<li>Bruk annen port<ul>
+<li>Kan se noe av isoleringen her</li>
+</ul>
+</li>
+<li>Gi den et navn, slik at den er gjenkjennelig</li>
+<li>Hygiene sak, automatisk opprydding når konteineren har gjort sitt</li>
+</ul>
+</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">
+# Kjør
+<!-- .slide: data-auto-animate data-trim data-line-numbers-->
+<!-- .element: data-id="run-animation"-->
+
+![før](assets/for.png)
+</script></section></section><section ><section data-markdown><script type="text/template">
+# Endre
+<!-- .slide: data-auto-animate data-trim data-line-numbers-->
+<!-- .element: data-id="change-animation"-->
+
+```dockerfile [7-11]
+RUN \
+    apt-get update && \
+    apt-get install -y --no-install-recommends git && \
+    git clone https://github.com/Norsk-Programmering/Website && \
+    cp -R /Website/public/* /usr/share/nginx/html
+
+RUN \
+    sed 's/"Recursive",/"Comic Sans MS",/' \
+        -i /usr/share/nginx/html/css/master.css  && \
+    sed 's/color: #ffffff;/color: #c61399;/' \
+        -i /usr/share/nginx/html/css/master.css
+```
+</script></section><section data-markdown><script type="text/template">
+# Endre
+<!-- .slide: data-auto-animate data-trim data-line-numbers-->
+<!-- .element: data-id="change-animation"-->
+
+![etter](assets/etter.png)
+</script></section></section><section  data-markdown><script type="text/template">
+# Farlig
+
+![Ludvig](assets/ludvig.jpg)
+
+<aside class="notes"><ul>
+<li>Isolering</li>
+<li>Root</li>
+</ul>
+</aside></script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

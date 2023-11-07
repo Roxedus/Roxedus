@@ -31,6 +31,7 @@ jobs:
           node-version: 18
       - uses: extractions/setup-just@v1
       - name: Prep hugo
+        working-directory: site
         run: |
           hugo mod get
           hugo mod npm pack

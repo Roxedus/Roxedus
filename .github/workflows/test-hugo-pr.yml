@@ -18,5 +18,15 @@ jobs:
         with:
           hugo-version: "0.120.3"
           extended: true
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Prep hugo
+        working-directory: site
+        run: |
+          hugo mod get
+          hugo mod npm pack
+          npm install
       - name: Build
         run: hugo -s ./site --minify

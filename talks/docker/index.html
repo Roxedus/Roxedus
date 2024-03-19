@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
     <link rel="stylesheet" href="./_assets/custom.css" />
-
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="\r?\n---\r?\n" data-separator-vertical="\r?\n----\r?\n">
+          <textarea data-template>
+            
 # Docker
 
 En lite teknisk gjennomgang av en teknikker
@@ -24,7 +26,9 @@ En lite teknisk gjennomgang av en teknikker
 - Hva er det til?
 - Hvordan bruker man det?
 - Er det farlig?!
-</script></section><section ><section data-markdown><script type="text/template">
+
+---
+
 # Simen Røstvik
 
 <div id="right">
@@ -41,24 +45,29 @@ En lite teknisk gjennomgang av en teknikker
 - Oslo
 
 </div>
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 # Linuxserver.io
 
 - 19 Milliarder
 - 2016
     - 2021
 
-<aside class="notes"><ul>
-<li>Pulls på dockerhub</li>
-<li>Prosjekter fra 2016, involvert fra 2021</li>
-</ul>
-</aside></script></section><section data-markdown><script type="text/template">
+Note:
+- Pulls på dockerhub
+- Prosjekter fra 2016, involvert fra 2021
+
+----
+
 # Sopra Steria
 
 - September 2023
 - Cloud Native Community
 - IaC
-</script></section></section><section  data-markdown><script type="text/template">
+
+---
+
 # Hva er det til
 
 - Isolering av applikasjoner
@@ -67,36 +76,25 @@ En lite teknisk gjennomgang av en teknikker
 - Kan være kode <!-- .element: class="fragment" data-fragment-index="1" -->
 - Verktøykasse <!-- .element: class="fragment" data-fragment-index="2" -->
 
-<aside class="notes"><ul>
-<li>Hovedformål<ul>
-<li>Isolerer prosesser som standard<ul>
-<li>Nettverk er ikke helt isolert som standard<ul>
-<li>Port inn er sperret</li>
-</ul>
-</li>
-<li>Applikasjoner er isolert fordi lagring og prosesser er</li>
-<li>Kan dele andre ressurser ved behov</li>
-</ul>
-</li>
-<li>Kan reprodusere miljø på OS og pakke nivå<ul>
-<li>Ikke immun mot kernel og hardware-endringer</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Ikke et direkte IaC verktøy, men kan deklarere en konteiner som kode<ul>
-<li>Passer inn blant kodebasen i versjkonkontroll</li>
-<li>Bygg kan versjoneres</li>
-</ul>
-</li>
-<li>Kan kjøre mer enn en applikasjon<ul>
-<li>VNC</li>
-<li>Shell alias</li>
-<li>Utviklermiljø</li>
-</ul>
-</li>
-</ul>
-</aside></script></section><section  data-markdown><script type="text/template">
+Note:
+- Hovedformål
+    - Isolerer prosesser som standard
+        - Nettverk er ikke helt isolert som standard
+            - Port inn er sperret
+        - Applikasjoner er isolert fordi lagring og prosesser er
+        - Kan dele andre ressurser ved behov
+    - Kan reprodusere miljø på OS og pakke nivå
+        - Ikke immun mot kernel og hardware-endringer
+- Ikke et direkte IaC verktøy, men kan deklarere en konteiner som kode
+    - Passer inn blant kodebasen i versjkonkontroll
+    - Bygg kan versjoneres
+- Kan kjøre mer enn en applikasjon
+    - VNC
+    - Shell alias
+    - Utviklermiljø
+
+---
+
 # Hvordan
 
 - Opprett
@@ -104,30 +102,27 @@ En lite teknisk gjennomgang av en teknikker
     - Del
 - Kjør <!-- .element: class="fragment" data-fragment-index="1" -->
 
-<aside class="notes"><ul>
-<li>Flere måter å lage et bilde på<ul>
-<li>Dockerfile, IaC<ul>
-<li>Relativt lett å få oversikt</li>
-<li>Containerfile</li>
-</ul>
-</li>
-<li>Lage &quot;snapshot&quot; med Docker Commit</li>
-<li>Rootfs som tarball</li>
-</ul>
-</li>
-<li>Et bygget bilde kan deles<ul>
-<li>Registry som dockerhub, ghcr <a href="https://www.linuxserver.io/blog/docker-team-changes">https://www.linuxserver.io/blog/docker-team-changes</a></li>
-<li>Tar-arkiv</li>
-</ul>
-</li>
-</ul>
-</aside></script></section><section  data-markdown><script type="text/template">
+Note:
+- Flere måter å lage et bilde på
+    - Dockerfile, IaC
+        - Relativt lett å få oversikt
+        - Containerfile
+    - Lage "snapshot" med Docker Commit
+    - Rootfs som tarball
+- Et bygget bilde kan deles
+    - Registry som dockerhub, ghcr <https://www.linuxserver.io/blog/docker-team-changes>
+    - Tar-arkiv
+
+---
+
 # Hæ
 
 - Image/bilde
 - Container/konteiner
 - Registry/register
-</script></section><section ><section data-markdown><script type="text/template">
+
+---
+
 # Opprett
 
 ```dockerfile [1|3-7]
@@ -140,19 +135,16 @@ RUN \
     cp -R /Website/public/* /usr/share/nginx/html
 ```
 
-<aside class="notes"><ul>
-<li>Baserer oss på, kjører en nginx ut av boksen<ul>
-<li>Tagget som 1.24</li>
-</ul>
-</li>
-<li>Vanlig Debian flow<ul>
-<li>Oppdater lokal repo, installer git</li>
-<li>Klon repo</li>
-<li>Flytt html</li>
-</ul>
-</li>
-</ul>
-</aside></script></section><section data-markdown><script type="text/template">
+Note:
+- Baserer oss på, kjører en nginx ut av boksen
+    - Tagget som 1.24
+- Vanlig Debian flow
+    - Oppdater lokal repo, installer git
+    - Klon repo
+    - Flytt html
+
+----
+
 # Bygg
 <!-- .slide: data-auto-animate -->
 <!-- .element: data-id="build-animation"-->
@@ -163,15 +155,14 @@ docker \
     -t ghcr.io/norsk-programmering/website \
     .
 ```
-<aside class="notes"><ul>
-<li>Build</li>
-<li>Tag<ul>
-<li>Latest</li>
-</ul>
-</li>
-<li>Kontekst</li>
-</ul>
-</aside></script></section><section data-markdown><script type="text/template">
+Note:
+- Build
+- Tag
+    - Latest
+- Kontekst
+
+----
+
 # Bygg
 <!-- .slide: data-auto-animate data-trim data-line-numbers-->
 <!-- .element: data-id="build-animation"-->
@@ -184,7 +175,9 @@ docker \
 ```
 
 <video data-preload data-autoplay src="assets/build.mp4"></video>
-</script></section></section><section  data-markdown><script type="text/template">
+
+---
+
 # Del
 
 ```shell [2]
@@ -193,10 +186,11 @@ docker \
     ghcr.io/norsk-programmering/website:latest
 ```
 
-<aside class="notes"><ul>
-<li>Dyttes til Github Container Registry</li>
-</ul>
-</aside></script></section><section ><section data-markdown><script type="text/template">
+Note:
+- Dyttes til Github Container Registry
+
+---
+
 # Kjør
 <!-- .slide: data-auto-animate data-trim data-line-numbers-->
 <!-- .element: data-id="run-animation"-->
@@ -217,29 +211,26 @@ docker \
         ghcr.io/norsk-programmering/website:latest
     ```
 
-<aside class="notes"><ul>
-<li>Kan være på en annen maskin<ul>
-<li><code>docker login</code></li>
-</ul>
-</li>
-<li>Hent bilde fra GHCR</li>
-<li>Kjør<ul>
-<li>Bruk annen port<ul>
-<li>Kan se noe av isoleringen her</li>
-</ul>
-</li>
-<li>Gi den et navn, slik at den er gjenkjennelig</li>
-<li>Hygiene sak, automatisk opprydding når konteineren har gjort sitt</li>
-</ul>
-</li>
-</ul>
-</aside></script></section><section data-markdown><script type="text/template">
+Note:
+- Kan være på en annen maskin
+    - `docker login`
+- Hent bilde fra GHCR
+- Kjør
+    - Bruk annen port
+        - Kan se noe av isoleringen her
+    - Gi den et navn, slik at den er gjenkjennelig
+    - Hygiene sak, automatisk opprydding når konteineren har gjort sitt
+
+----
+
 # Kjør
 <!-- .slide: data-auto-animate data-trim data-line-numbers-->
 <!-- .element: data-id="run-animation"-->
 
 ![før](assets/for.png)
-</script></section></section><section ><section data-markdown><script type="text/template">
+
+---
+
 # Endre
 <!-- .slide: data-auto-animate data-trim data-line-numbers-->
 <!-- .element: data-id="change-animation"-->
@@ -257,25 +248,33 @@ RUN \
     sed 's/color: #ffffff;/color: #c61399;/' \
         -i /usr/share/nginx/html/css/master.css
 ```
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 # Endre
 <!-- .slide: data-auto-animate data-trim data-line-numbers-->
 <!-- .element: data-id="change-animation"-->
 
 ![etter](assets/etter.png)
-</script></section></section><section  data-markdown><script type="text/template">
+
+---
+
 # Farlig
 
 ![Ludvig](assets/ludvig.jpg)
 
-<aside class="notes"><ul>
-<li>Isolering</li>
-<li>Root</li>
-</ul>
-</aside></script></section></div>
+Note:
+- Isolering
+- Root
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -304,6 +303,9 @@ RUN \
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
         slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -316,12 +318,26 @@ RUN \
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {}, queryOptions);
+      var options = extend(defaultOptions, {"_":["/slides/index.md"],"css":"custom.css","static":"_site","static-dirs":"assets","staticDirs":"assets"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

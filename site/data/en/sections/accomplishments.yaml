@@ -78,4 +78,15 @@ accomplishments:
       Earners of this designation are accomplished Kubernetes practitioners (as evidenced by holding the CKA credential).
       Earners demonstrated the requisite abilities to secure container-based applications and Kubernetes platforms during build,
       deployment and runtime, and are qualified to perform these tasks in a professional setting.
-    certificateURL: https://www.credly.com/badges/f450a030-46d8-42e2-ad77-bc1205fd9a33
+    certificateURL: https://www.credly.com/badges/256173f7-6a52-4640-9ae7-0e5d91c34eda
+
+  - name: "CGOA: Certified GitOps Associate"
+    timeline: "March 2024 - March 2027"
+    organization:
+      name: The Linux Foundation
+      url: https://www.linuxfoundation.org/
+    courseOverview: >+
+      Earners of this designation demonstrated comprehension of GitOps patterns including when and why to use them. They also understand
+      the precautions to take around tooling for manifest format and packaging, state store systems, and reconciliation engines to adhere
+      to and extend GitOps principles.
+    certificateURL: https://www.credly.com/badges/256173f7-6a52-4640-9ae7-0e5d91c34eda

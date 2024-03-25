@@ -48,4 +48,11 @@ accomplishments:
     organization:
       name: The Linux Foundation
       url: https://www.linuxfoundation.org/
-    certificateURL: https://www.credly.com/badges/f450a030-46d8-42e2-ad77-bc1205fd9a33
+    certificateURL: https://www.credly.com/badges/256173f7-6a52-4640-9ae7-0e5d91c34eda
+
+  - name: "CGOA: Certified GitOps Associate"
+    timeline: "Mars 2024 - Mars 2027"
+    organization:
+      name: The Linux Foundation
+      url: https://www.linuxfoundation.org/
+    certificateURL: https://www.credly.com/badges/9efab1e6-e0bb-41e9-86fc-2cab4f0d5130

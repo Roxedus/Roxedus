@@ -15,15 +15,16 @@ Some guy from Norway learning by doing, sometimes writing about my newfound know
 
 Currently learning:
 
-* K*S
-* Terraform
+* Life
 
 Comfortable with:
 
 * Ansible
 * Bash
 * Docker
+* K*S
 * Python, especially Discord.py
+* Terraform
 
 Currently looking for work
 

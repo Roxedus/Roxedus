@@ -29,7 +29,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      - uses: extractions/setup-just@v2
+      - uses: extractions/setup-just@v3
       - name: Prep hugo
         working-directory: site
         run: |

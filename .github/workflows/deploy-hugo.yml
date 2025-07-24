@@ -26,6 +26,7 @@ jobs:
           hugo-version: "0.120.3"
           extended: true
       - name: Setup Node
+        id: setup-node
         uses: actions/setup-node@v4
         with:
           node-version: 18

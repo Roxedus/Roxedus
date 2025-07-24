@@ -1,0 +1,49 @@
+[tools]
+"aqua:gohugoio/hugo/hugo-extended" = "0.148.1"
+go = "1.24.5"
+node = "24.4.1"
+
+[tasks.install]
+depends = ['hugo_pack']
+dir = "{{config_root }}/site"
+description = "Run npm install"
+run = "npm install"
+
+[tasks.hugo_get]
+hide = true
+dir = "{{config_root }}/site"
+description = "Get the hugo theme"
+run = "hugo mod get"
+
+[tasks.hugo_tidy]
+hide = true
+depends = ['hugo_get']
+dir = "{{config_root }}/site"
+description = "Tidy hugo"
+run = "hugo mod tidy"
+
+[tasks.hugo_pack]
+hide = true
+depends = ['hugo_tidy']
+dir = "{{config_root }}/site"
+description = "Pack NPM"
+run = "hugo mod npm pack"
+
+[tasks.hugo]
+depends = ['install']
+dir = "{{config_root }}/site"
+description = "Run hugo"
+run = "hugo server -w"
+
+[tasks.upgrade]
+#depends = ['hugo_theme_upgrade']
+dir = "{{config_root }}"
+description = "Sync current hugo with CI"
+file = 'site/.hugo-tested.sh'
+
+[tasks.hugo_theme_upgrade]
+hide = true
+depends = ['hugo_tidy']
+dir = "{{config_root }}/site"
+description = "Get latest theme"
+run = "hugo mod get -u"

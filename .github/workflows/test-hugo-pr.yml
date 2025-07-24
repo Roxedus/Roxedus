@@ -20,6 +20,7 @@ jobs:
           extended: true
       - name: Setup Node
         uses: actions/setup-node@v4
+        id: setup-node
         with:
           node-version: 18
       - name: Prep hugo

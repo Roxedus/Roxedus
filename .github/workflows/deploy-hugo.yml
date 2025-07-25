@@ -43,13 +43,13 @@ jobs:
           npm install
       - name: Build
         run: hugo -s ./site --minify
-      - name: Talks
-        run: mkdir ./site/public/talks
-      - name: Build Docker talk files
-        working-directory: upstream_talks
-        run: just static docker
-      - name: Move Docker talk
-        run: mv upstream_talks/docker/_site site/public/talks/docker
+      # - name: Talks
+      #   run: mkdir ./site/public/talks
+      # - name: Build Docker talk files
+      #   working-directory: upstream_talks
+      #   run: just static docker
+      # - name: Move Docker talk
+      #   run: mv upstream_talks/docker/_site site/public/talks/docker
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:

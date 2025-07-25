@@ -75,3 +75,4 @@ site/resources/
 site/public/
 site/node_modules/
 site/assets/jsconfig.json
+site/badges.*

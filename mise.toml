@@ -36,10 +36,16 @@ description = "Run hugo"
 run = "hugo server -w"
 
 [tasks.upgrade]
-#depends = ['hugo_theme_upgrade']
+depends = ['hugo_theme_upgrade']
 dir = "{{config_root }}"
 description = "Sync current hugo with CI"
 file = 'site/.hugo-tested.sh'
+
+[tasks.cert]
+dir = "{{config_root }}/site"
+description = "Get certificates from Credly"
+shell = 'bash -c'
+file = './.get-certs.sh'
 
 [tasks.hugo_theme_upgrade]
 hide = true

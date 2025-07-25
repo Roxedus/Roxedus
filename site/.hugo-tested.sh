@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 hugoVer="$(hugo version | sed -n -e 's/hugo.v\([[:digit:]]\+\.[[:digit:]]\+\.[[:digit:]]\+\)-.*/\1/p')"
 nodeVer="$(node -v)"
 nodeVer="${nodeVer#*v}"

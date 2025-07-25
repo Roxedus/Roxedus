@@ -31,6 +31,10 @@ jobs:
         with:
           node-version: 18
       - uses: extractions/setup-just@v2
+      - name: Get certificates
+        working-directory: site
+        run: |
+          ./.get-certs.sh
       - name: Prep hugo
         working-directory: site
         run: |

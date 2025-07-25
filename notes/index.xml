@@ -1,3 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes on Simen's Page</title><link>https://roxedus.dev/notes/</link><description>Recent content in Notes on Simen's Page</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 08 Jun 2010 08:06:25 +0600</lastBuildDate><atom:link href="https://roxedus.dev/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Linuxserver.io docker notes</title><link>https://roxedus.dev/notes/docker/lsio/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://roxedus.dev/notes/docker/lsio/</guid><description> Jenkins builder run Runs the Jenkins builder on a local repo, for keeping it in sync.
-alias sync=&amp;#34;docker pull ${builder:=lscr.io/linuxserver/jenkins-builder\:latest} &amp;amp;&amp;amp; \ docker run --rm \ -v $(pwd):/tmp \ -e LOCAL=true \ -e PUID=$(id -u) -e PGID=$(id -g) \ ${builder:=lscr.io/linuxserver/jenkins-builder\:latest} &amp;amp;&amp;amp; \ rm -rf .jenkins-external&amp;#34;</description></item><item><title>Docker development notes</title><link>https://roxedus.dev/notes/docker/development/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://roxedus.dev/notes/docker/development/</guid><description> Quick, desposable test-container Tty in interactive mode. -it Predictable name. --name=test Disposable. --rm Preventes most common orphaned volumes. --tmpfs /config:rw LSIO ready. -e TZ=${TZ} -e PUID=${PUID} -e PGID=${PGID} alias tester=&amp;#34;docker run --rm -it \ --name=test --tmpfs /config:rw \ -e TZ=${TZ} -e PUID=${PUID} -e PGID=${PGID}&amp;#34; Shell access to mentioned test-container alias texec=&amp;#34;docker exec -it test /bin/bash&amp;#34; Dive Alias for Dive.
-alias dive=&amp;#34;docker run --rm -it --name=dive -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest&amp;#34;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes on Simen's Page</title><link>https://roxedus.dev/notes/</link><description>Recent content in Notes on Simen's Page</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 08 Jun 2010 08:06:25 +0600</lastBuildDate><atom:link href="https://roxedus.dev/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Linuxserver.io docker notes</title><link>https://roxedus.dev/notes/docker/lsio/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://roxedus.dev/notes/docker/lsio/</guid><description>&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Jenkins builder run&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;p>Runs the &lt;a href="https://github.com/linuxserver/docker-jenkins-builder" target="_blank" rel="noopener">Jenkins builder&lt;/a> on a local repo, for keeping it in sync.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>alias sync&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;docker pull &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>builder:=lscr.io/linuxserver/jenkins-builder&lt;span style="color:#ae81ff">\:&lt;/span>latest&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">docker run --rm \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -v &lt;/span>&lt;span style="color:#66d9ef">$(&lt;/span>pwd&lt;span style="color:#66d9ef">)&lt;/span>&lt;span style="color:#e6db74">:/tmp \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -e LOCAL=true \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -e PUID=&lt;/span>&lt;span style="color:#66d9ef">$(&lt;/span>id -u&lt;span style="color:#66d9ef">)&lt;/span>&lt;span style="color:#e6db74"> -e PGID=&lt;/span>&lt;span style="color:#66d9ef">$(&lt;/span>id -g&lt;span style="color:#66d9ef">)&lt;/span>&lt;span style="color:#e6db74"> \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> &lt;/span>&lt;span style="color:#e6db74">${&lt;/span>builder:=lscr.io/linuxserver/jenkins-builder&lt;span style="color:#ae81ff">\:&lt;/span>latest&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> &amp;amp;&amp;amp; \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">rm -rf .jenkins-external&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Docker development notes</title><link>https://roxedus.dev/notes/docker/development/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://roxedus.dev/notes/docker/development/</guid><description>&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Quick, desposable test-container&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;ul>
+&lt;li>Tty in interactive mode. &lt;code>-it&lt;/code>&lt;/li>
+&lt;li>Predictable name. &lt;code>--name=test&lt;/code>&lt;/li>
+&lt;li>Disposable. &lt;code>--rm&lt;/code>&lt;/li>
+&lt;li>Preventes most common orphaned volumes. &lt;code>--tmpfs /config:rw&lt;/code>&lt;/li>
+&lt;li>LSIO ready. &lt;code>-e TZ=${TZ} -e PUID=${PUID} -e PGID=${PGID}&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>alias tester&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;docker run --rm -it \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> --name=test --tmpfs /config:rw \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"> -e TZ=&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>TZ&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> -e PUID=&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>PUID&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74"> -e PGID=&lt;/span>&lt;span style="color:#e6db74">${&lt;/span>PGID&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Shell access to mentioned test-container&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>alias texec&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;docker exec -it test /bin/bash&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;div class="note-card ">
+&lt;div class="item">
+&lt;h5 class="note-title">&lt;span>Dive&lt;/span>&lt;/h5>
+&lt;div class="card">
+&lt;div class="card-body">&lt;p>Alias for &lt;a href="https://github.com/wagoodman/dive" target="_blank" rel="noopener">Dive&lt;/a>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>alias dive&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#34;docker run --rm -it --name=dive -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive:latest&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

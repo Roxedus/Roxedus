@@ -10,6 +10,9 @@
     "suppressNotifications": [
         "prIgnoreNotification"
     ],
+    "npm": {
+        "enabled": false
+    },
     "packageRules": [
         {
             "description": "Only create GHA PRs after a week",

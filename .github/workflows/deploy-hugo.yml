@@ -23,13 +23,13 @@ jobs:
         uses: peaceiris/actions-hugo@v3.0.0
         id: install
         with:
-          hugo-version: "0.120.3"
+          hugo-version: "0.148.1"
           extended: true
       - name: Setup Node
         id: setup-node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 24.4.1
       - uses: extractions/setup-just@v2
       - name: Get certificates
         working-directory: site

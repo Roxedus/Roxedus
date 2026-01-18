@@ -103,3 +103,6 @@ other = "Siden du ser etter er ikke her enda."
 
 [view_certificate]
 other = "Se sertifikat"
+
+[webring_text]
+other = "Vebbring"

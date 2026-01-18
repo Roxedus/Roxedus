@@ -12,6 +12,8 @@ module:
       target: static/files
     - source: ./node_modules/katex/dist/fonts
       target: static/fonts
+    - source: webrings
+      target: static/rings
 
 defaultContentLanguage: en
 languages:
@@ -53,7 +55,6 @@ params:
     favicon: images/animoji.png
 
   features:
-
     theme:
       enable: true
       services:

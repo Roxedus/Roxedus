@@ -1,0 +1,3 @@
+[submodule "site/webrings/norsk-programmering-badge"]
+	path = site/webrings/norsk-programmering-badge
+	url = https://github.com/Maritims/norsk-programmering-badge

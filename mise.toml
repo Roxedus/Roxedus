@@ -1,5 +1,5 @@
 [tools]
-"aqua:gohugoio/hugo/hugo-extended" = "0.148.1"
+"aqua:gohugoio/hugo/hugo-extended" = "0.154.5"
 go = "1.25.6"
 node = "24.12.0"
 

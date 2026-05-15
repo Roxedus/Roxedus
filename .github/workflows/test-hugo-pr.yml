@@ -1,4 +1,7 @@
 name: Test build
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
 on:
   pull_request:
     paths:

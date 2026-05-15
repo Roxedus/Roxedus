@@ -18,11 +18,11 @@ module:
 defaultContentLanguage: en
 languages:
   en:
-    languageName: English
+    label: English
     weight: 1
     title: "Simen's Page"
   "no":
-    languageName: Norsk
+    label: Norsk
     weight: 2
     title: "Simens side"
 

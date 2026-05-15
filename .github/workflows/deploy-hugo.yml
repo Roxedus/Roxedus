@@ -29,7 +29,7 @@ jobs:
         id: setup-node
         uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
-          node-version: 24.14.1
+          node-version: 24.15.0
       - uses: extractions/setup-just@f8a3cce218d9f83db3a2ecd90e41ac3de6cdfd9b # v3
       - name: Get certificates
         working-directory: site

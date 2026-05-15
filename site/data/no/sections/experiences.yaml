@@ -15,9 +15,15 @@ experiences:
       url: "https://www.soprasteria.no/"
       location: Oslo
     positions:
+      - designation: Senior Plattformingeniør
+        start:
+        responsibilities:
+          - Plattformingeniør med fokus på automatisering, infrastruktur som kode og DevOps-praksis.
+          - Infrastruktur som kode
+
       - designation: Plattformingeniør
         start: September 2023
-        # give some points about what was your responsibilities at the company.
+        end: Juli 2025
         responsibilities:
           - Infrastruktur som kode
 
@@ -29,7 +35,6 @@ experiences:
       - designation: Konsulent
         start: August 2022
         end: August 2023
-        # give some points about what was your responsibilities at the company.
         responsibilities:
           - Infrastruktur som kode, Terraform
           - Cloud Adoption Framework og landingsoner i Azure
@@ -39,13 +44,11 @@ experiences:
       name: HEMIT
       url: "https://hemit.no/"
       location: Trondheim
-      # company overview
       overview: Helse Midt-Norge IT har ansvar for sentral drift og forvaltning av felles IKT-systemer for alle sykehusene i helseregionen.
     positions:
       - designation: IT Konsulent
         start: April 2021
         end: Jul 2022
-        # give some points about what was your responsibilities at the company.
         responsibilities:
           - Prosjektarbeid rettet mot M365
           - Utrulling og håndhevelse av passordregler
@@ -55,13 +58,11 @@ experiences:
       name: NTNU
       url: "https://www.ntnu.no/"
       location: Campus Kalvskinnet
-      # company overview
       overview: Norges teknisk-naturvitenskapelige universitet har hovedansvar for den høyere teknologiutdanningen i Norge.
     positions:
       - designation: Lærling i IKT-Servicefag
         start: Aug 2016
         end: Jul 2018
-        # give some points about what was your responsibilities at the company.
         responsibilities:
           - Brukersupport hovedsaklig i Windows-økosystemet
           - Feilsøking av programmvare og maskinvare

@@ -15,9 +15,15 @@ experiences:
       url: "https://www.soprasteria.no/"
       location: Oslo
     positions:
+      - designation: Senior Platform Engineer
+        start: September 2025
+        responsibilities:
+          - Platform Engineer with a focus on automation, infrastructure as code and DevOps practices.
+          - Infrastructure as Code
+
       - designation: Engineer, Cloud Native
         start: September 2023
-        # give some points about what was your responsibilities at the company.
+        end: July 2025
         responsibilities:
           - Infrastructure as Code
 
@@ -29,7 +35,6 @@ experiences:
       - designation: Consultant
         start: August 2022
         end: August 2023
-        # give some points about what was your responsibilities at the company.
         responsibilities:
           - Infrastructure as Code, Terraform
           - Cloud Adoption Framework with landingzones in Azure
@@ -39,7 +44,6 @@ experiences:
       name: HEMIT
       url: "https://hemit.no/om-oss-hemit/about-us"
       location: Trondheim
-      # company overview
       overview: Central Norway Regional Health Authority's IT department
     positions:
       - designation: IT Consultant
@@ -54,13 +58,11 @@ experiences:
       name: NTNU
       url: "https://www.ntnu.edu/"
       location: Campus Kalvskinnet
-      # company overview
       overview: Norwegian University of Science and Technology has a main profile in science and technology.
     positions:
       - designation: Apprentice In ICT
         start: Aug 2016
         end: Jul 2018
-        # give some points about what was your responsibilities at the company.
         responsibilities:
           - Support users mainly in the Windows ecosystem
           - Hardware and software troubleshooting

@@ -34,8 +34,4 @@ Currently looking for work
 * [Selfhosters.net](https://selfhosters.net/)
 * [Linuxserver](http://linuxserver.io/)
 
-[![Roxedus github stats](https://github-readme-stats.vercel.app/api?username=roxedus&show_icons=true&theme=radical)](https://github.com/roxedus)
-
 I mainly write Python, but I do enjoy myself a good shell script.
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=roxedus&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
